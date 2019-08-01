@@ -4,7 +4,6 @@
 % Should check this out: https://in.mathworks.com/matlabcentral/fileexchange/24990-retinal-blood-vessel-extraction
 
 % Values that seem to work: sigma = 0.5, L = 3, threshold = 15
-% BUT BIG QUESTION: How to choose these values?
 
 I = imread('retina1.jpg');
 I = rgb2gray(I);

@@ -1,4 +1,4 @@
-function I_corr = getCorrForAllPixels(kernel, I, resolution)
+function I_corr = getCorrForAllPixels(kernel, I, resolution, threshold)
     % This function aims to get the correlation value for each pixel in the
     % image.
     
@@ -31,7 +31,7 @@ function I_corr = getCorrForAllPixels(kernel, I, resolution)
                 valArr(1, k) = imgArr{1, k}(i, j);
             end
             
-            if(max(valArr) > 15)    % WHY THE THRESHOLD?? - to classify as blood vessel or not
+            if(max(valArr) > threshold)    % WHY THE THRESHOLD?? - to classify as blood vessel or not
                 I_corr(i, j) = max(valArr);
             end
         end
