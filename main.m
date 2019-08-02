@@ -1,6 +1,8 @@
 % This script is the main script of the project. Running this will enable
 % the demonstration of the research paper.
 
+close all;
+
 resolution = 15;
 threshold = 20;
 
@@ -20,5 +22,6 @@ I_corr = getCorrForAllPixels(k, I, resolution, threshold);
 % post-processing done with a median filter
 I_bv = medfilt2(I_corr);
 
+figure
 subplot(1, 2, 1), imshow(I), title('Original image');
 subplot(1, 2, 2), imshow(I_bv), title('Blood Vessels highlighted');

@@ -38,19 +38,16 @@ function I_corr = getCorrForAllPixels(kernel, I, resolution, threshold)
     end
     
     % Visualising what each kernel does to the image
+    figure
     for i=1:length(imgArr)
-        subplot(3, length(imgArr)/3, i), imshow(imgArr{1, i}), title((i-1)*resolution);
+        subplot(3, length(imgArr)/3, i), imshow(imgArr{1, i}), title([num2str((i-1)*resolution), ' degrees']);
     end
     
     % Visualising each kernel
     figure
     for i=1:length(cellArr)
-        subplot(3, length(cellArr)/3, i), imshow(mat2gray(cellArr{1, i})), title((i-1)*resolution);
+        subplot(3, length(cellArr)/3, i), imshow(mat2gray(cellArr{1, i})), title([num2str((i-1)*resolution), ' degrees']);
     end
-    
-    
-    
-    
     
     
 end
