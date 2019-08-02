@@ -9,6 +9,7 @@ This paper uses the concept of matched filters to detect piece-wise linear segme
 
 
 ## My Results
+![alt text](Images/Results/BVHighlighted.fig)
 
 ## My Conclusions
 This algorithm works very well in detecting blood vessels in retinal images if an estimate of the general width of the blood vessels is known. The result is very sensitive to the value of sigma chosen for the Gaussian distribution. 
