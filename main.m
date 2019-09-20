@@ -21,6 +21,8 @@ I_corr = getCorrForAllPixels(k, I, resolution, threshold);
 % STEP 4 : To remove the noise in between the blood vessels,
 % post-processing done with a median filter
 I_bv = medfilt2(I_corr);
+I_bv = bwmorph(I_bv, 'dilate');
+I_bv = bwareaopen(I_bv, 50);
 
 figure
 subplot(1, 2, 1), imshow(I), title('Original image');
