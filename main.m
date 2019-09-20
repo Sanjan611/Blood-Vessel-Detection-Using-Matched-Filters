@@ -16,7 +16,7 @@ I = smoothImage(I);
 k = makeKernel(0.5, 3);
 
 % STEP 3 : Get the image after implementing the proposed algorithm
-I_corr = getCorrForAllPixels(k, I, resolution, threshold);
+I_corr = getCorrForAllPixels(k, I, resolution, threshold, false);
 
 % STEP 4 : To remove the noise in between the blood vessels,
 % post-processing done with a median filter
